@@ -1,13 +1,14 @@
 ;***************************************************************************
 ;
-;	    Filename: Eslave.ASM
-;	    Date: 11/05/2024
-;	    File Version: 2
-;	    Author: Owen Fujii
-;	    Co-Author: Justin Bell
+;	    Filename: FRET_SLAVE.S
+;	    Date: 12/04/2025
+;	    File Version: 1
+;	    Author: Jason Permann
+;	    Co-Author: Payden Hoskins
 ;	    Company: Idaho State University
-;	    Description: A Program for a slave I2C device that plays notes on the
-;			    E string of a Bass guitar
+;	    Description: A Program for a slave I2C device that sets a one of
+;				12 frets on a bass guitar
+			    
 ;**************************************************************************
 	
 ;*************************************************************************
@@ -15,7 +16,7 @@
 ;	    Revision History:
 ;   
 ;	    Modified as listed
-;	    Started 11/05/2024
+;	    Started 12/10/2025
 ;
 ;*************************************************************************
     
@@ -63,13 +64,14 @@
 ;Start Of Program
     PSECT resetVect,class=CODE,delta=2	;Reset Vector Adress
     GOTO  SETUP
+    
     PSECT isrVect,class=CODE,delta=2
-    ;GOTO INTERUPT_HANDLER
+	
 ;Setup Code That Runs Once At Power Up/Reset
     PSECT notes,class=CODE,delta=2 
 ;<editor-fold defaultstate="collapsed" desc="Look Up Table">
 NOTE_TABLE:
-    ADDWF   PCL,1   ;ADD working register to program counter  
+    ADDWF   PCL,1   ;ADD working register (NOTE) to program counter  
     GOTO    OFR	;0
     GOTO    OFR	;1
     GOTO    OFR	;2
@@ -200,148 +202,126 @@ NOTE_TABLE:
     GOTO    OFR	;127;</editor-fold>
 ; Setup Code That Runs Once At Power Up/Reset
     PSECT code,class=CODE,delta=2
+; Inline Slave Routine Section
+;-------------------------------------------------------------------------------
 ;<editor-fold defaultstate="collapsed" desc="MAIN">
 MAIN:
     BANKSEL	PORTC
-    BCF		PORTC,2
-    BANKSEL PIR1
-    BTFSC   PIR1,3
-    ;CALL    I2C_READ
-    GOTO    RX_HANDLER
+    BCF		PORTC,2	;Turn Off Status LED
+    BANKSEL	PIR1
+    BTFSC	PIR1,3	;Check SSP1IF flag (RX pending)
+    ;CALL    I2C_READ	(Uncomment this and comment next line for straight I2C testing)
+    GOTO	RX_HANDLER  ;Subroutine for handling a I2C RX
     GOTO	MAIN;</editor-fold>
-
-;<editor-fold defaultstate="collapsed" desc="Power On">
-POWER_ON:
-    BANKSEL	PORTC
-    BSF		PORTC,1
-    BANKSEL	DATA_BYTE
-    CLRF	DATA_BYTE
-    RETURN;</editor-fold>
     
-    
-;<editor-fold defaultstate="collapsed" desc="Note on/off decide">
+;<editor-fold defaultstate="collapsed" desc="RX_HANDLER">
 RX_HANDLER:
-    BANKSEL DATA_BYTE
-    CLRF    DATA_BYTE
+    BANKSEL DATA_BYTE	
+    CLRF    DATA_BYTE	;Clear user register for next I2C read
     
-    CALL    I2C_READ
+    CALL    I2C_READ	;Subroutine for reading and saving MIDI data from Master (include file)
+    
+    CALL    STATUS_LED
     
     BTFSC   DATA_RX_1,4 ;Check if upper nibble of command byte is a note on or off (8 or 9) 
-    GOTO    GRAB_NOTE
+    GOTO    GRAB_NOTE	;Subroutine for when command byte is note on
    
     GOTO    MAIN;</editor-fold>
-GRAB_NOTE:
-    MOVF    DATA_RX_2,0	;Move note value to w
-    GOTO    NOTE_TABLE
     
-    STATUS_LED:
-    BANKSEL	PORTC
-    BSF		PORTC,2
-    RETURN
+;<editor-fold defaultstate="collapsed" desc="Use Note Data">
+GRAB_NOTE:
+    MOVF    DATA_RX_2,0	;Move Note value to W
+    GOTO    NOTE_TABLE	;Look up table that for all available notes (0-127)
+    ;</editor-fold>
 
 ;<editor-fold defaultstate="collapsed" desc="Fret Handler">
-F0:	;no fret pressed
-
-    CALL	WAIT_FOR_NOTE_OFF
-    GOTO	MAIN
-F1:
-    
+F0:;no fret pressed
+    CALL	WAIT_FOR_NOTE_OFF   ;Subroutine that waits for a note off command
+    GOTO	MAIN		    ;All functions complete go back to main
+F1:  
     BANKSEL PORTB
     BCF	PORTB,0 ;set Fret 1
-
-    CALL	WAIT_FOR_NOTE_OFF
-    GOTO	MAIN
+    CALL	WAIT_FOR_NOTE_OFF   ;Subroutine that waits for a note off command
+    GOTO	MAIN		    ;All functions complete go back to main
 F2:
     BANKSEL PORTC
     BCF	PORTC,7 ;set Fret 2
-
-    CALL	WAIT_FOR_NOTE_OFF
-    GOTO	MAIN
+    CALL	WAIT_FOR_NOTE_OFF   ;Subroutine that waits for a note off command
+    GOTO	MAIN		    ;All functions complete go back to main
 F3:
     BANKSEL PORTC
     BCF	PORTC,6 ;set Fret 3
-
-    CALL	WAIT_FOR_NOTE_OFF
-    GOTO	MAIN
+    CALL	WAIT_FOR_NOTE_OFF   ;Subroutine that waits for a note off command
+    GOTO	MAIN		    ;All functions complete go back to main
 F4:
     BANKSEL PORTC
     BCF	PORTC,5 ;set Fret 4
-
-    CALL	WAIT_FOR_NOTE_OFF
-    GOTO	MAIN
+    CALL	WAIT_FOR_NOTE_OFF   ;Subroutine that waits for a note off command
+    GOTO	MAIN		    ;All functions complete go back to main
 F5:
     BANKSEL PORTB
     BCF	PORTB,4 ;set Fret 5
-
-    CALL	WAIT_FOR_NOTE_OFF
-    GOTO	MAIN
+    CALL	WAIT_FOR_NOTE_OFF   ;Subroutine that waits for a note off command
+    GOTO	MAIN		    ;All functions complete go back to main
 F6:
     BANKSEL PORTB
     BCF	PORTB,3 ;set Fret 6
-
-    CALL	WAIT_FOR_NOTE_OFF
-    GOTO	MAIN
+    CALL	WAIT_FOR_NOTE_OFF   ;Subroutine that waits for a note off command
+    GOTO	MAIN		    ;All functions complete go back to main
 F7:
     BANKSEL PORTB
     BCF	PORTB,2 ;set Fret 7
-
-    CALL	WAIT_FOR_NOTE_OFF
-    GOTO	MAIN
+    CALL	WAIT_FOR_NOTE_OFF   ;Subroutine that waits for a note off command
+    GOTO	MAIN		    ;All functions complete go back to main
 F8:
     BANKSEL PORTB
     BCF	PORTB,1 ;set Fret 8 
-
-    CALL	WAIT_FOR_NOTE_OFF
-    GOTO	MAIN
+    CALL	WAIT_FOR_NOTE_OFF   ;Subroutine that waits for a note off command
+    GOTO	MAIN		    ;All functions complete go back to main
 F9:
     BANKSEL PORTA
     BCF	PORTA,3 ;set Fret 9
-
-    CALL	WAIT_FOR_NOTE_OFF
-    GOTO	MAIN
+    CALL	WAIT_FOR_NOTE_OFF   ;Subroutine that waits for a note off command
+    GOTO	MAIN		    ;All functions complete go back to main
 F10:
     BANKSEL PORTA
     BCF	PORTA,2 ;set Fret 10
-
-    CALL	WAIT_FOR_NOTE_OFF
-    GOTO	MAIN
+    CALL	WAIT_FOR_NOTE_OFF   ;Subroutine that waits for a note off command
+    GOTO	MAIN		    ;All functions complete go back to main
 F11:
     BANKSEL PORTA
     BCF	PORTA,1 ;set Fret 11
-
-    CALL	WAIT_FOR_NOTE_OFF
-    GOTO	MAIN
+    CALL	WAIT_FOR_NOTE_OFF   ;Subroutine that waits for a note off command
+    GOTO	MAIN		    ;All functions complete go back to main
 F12:
     BANKSEL PORTA
     BCF	PORTA,0 ;set Fret 12 	
+    CALL	WAIT_FOR_NOTE_OFF   ;Subroutine that waits for a note off command
+    GOTO	MAIN		    ;All functions complete go back to main
+OFR:;OUT OF RANGE (no fret pressed)
+    CALL	WAIT_FOR_NOTE_OFF   ;Subroutine that waits for a note off command
+    GOTO	MAIN		    ;All functions complete go back to main
+    ;</editor-fold>
 
-    CALL	WAIT_FOR_NOTE_OFF
-    GOTO	MAIN
-OFR:	;OUT OF RANGE
-    
-    CALL	WAIT_FOR_NOTE_OFF
-    GOTO	MAIN
-    ;GOTO	INTERUPT_END;</editor-fold>
-
-;<editor-fold defaultstate="collapsed" desc="Wait for note off">
+;<editor-fold defaultstate="collapsed" desc="Wait for Note off command">
 WAIT_FOR_NOTE_OFF:
-    BANKSEL PIR1
-    BTFSC   PIR1,3
-    GOTO    CHECK_NOTE_COMMAND
-    GOTO    WAIT_FOR_NOTE_OFF
+    BANKSEL	PIR1
+    BTFSC	PIR1,3		    ;Check SSP1IF flag (RX pending)
+    GOTO	CHECK_NOTE_COMMAND  ;Subroutine for handling the 2nd I2C RX
+    GOTO	WAIT_FOR_NOTE_OFF   ;loop continously until SSP1IF flag is set
     
-    CHECK_NOTE_COMMAND:
-    BANKSEL DATA_BYTE
-    CLRF    DATA_BYTE
+CHECK_NOTE_COMMAND:
+    BANKSEL	DATA_BYTE
+    CLRF	DATA_BYTE	    ;Clear user register for next I2C read
     
-    CALL    I2C_READ
+    CALL	I2C_READ	    ;Subroutine for reading and saving MIDI data from Master (include file)
     
-    BTFSC	DATA_RX_1,4 ;Check if upper nibble of command byte is a note on or off (8 or 9) 
-    GOTO	CHECK_NOTE_COMMAND
+    BTFSC	DATA_RX_1,4	    ;Check if upper nibble of command byte is a note on or off (8 or 9) 
+    GOTO	CHECK_NOTE_COMMAND  ;loop continously until note off command recived
     GOTO	PORT_RESET;</editor-fold>
 
 ;<editor-fold defaultstate="collapsed" desc="PORT RESET">
-PORT_RESET:	;Set all Ports high to keep Frets from being pressed
+PORT_RESET:	;Set all Ports HIGH to reset any Fret that was energized
     BANKSEL	PORTA
     MOVLW	0xFF
     MOVWF	PORTA
@@ -351,17 +331,31 @@ PORT_RESET:	;Set all Ports high to keep Frets from being pressed
     MOVWF	PORTB
  
     BANKSEL	PORTC
-    MOVLW	0xFB ;LEAVE OUT STATUS LED
+    MOVLW	0xFB	;LEAVE OUT STATUS LED
     MOVWF	PORTC
-    
-    CALL	STATUS_LED
  
     RETURN;</editor-fold>
-    
-    SETUP:
-    CALL    SETUP88 ;Call is needed as the setup88 include file has a return at the end
-    CALL    I2C_SETUP_PERIPHERAL ;Call is needed as the I2C interupt include file has a return at the end of the peripheral setup
-    CALL    POWER_ON	;Set power on LED
-    GOTO    MAIN
 
+;Subroutines Section
+;-------------------------------------------------------------------------------
+;<editor-fold defaultstate="collapsed" desc="Sub for all Setup routines">
+SETUP:
+    CALL    SETUP88		    ;Call is needed as the setup88 include file has a return at the end
+    CALL    I2C_SETUP_PERIPHERAL    ;Call is needed as the I2C interupt include file has a return at the end of the peripheral setup
+    CALL    POWER_ON		    ;Set POWER ON LED
+    GOTO    MAIN;</editor-fold>
+    
+;<editor-fold defaultstate="collapsed" desc="Power On">
+POWER_ON:
+    BANKSEL	PORTC
+    BSF		PORTC,1	    ;Turn on Power LED
+    BANKSEL	DATA_BYTE
+    CLRF	DATA_BYTE   ;Clear user register for next I2C read
+    RETURN;</editor-fold>
+
+;<editor-fold defaultstate="collapsed" desc="Set Status LED">
+STATUS_LED:
+    BANKSEL	PORTC
+    BSF		PORTC,2	;Turn on STATUS LED
+    RETURN;</editor-fold>
  END 
