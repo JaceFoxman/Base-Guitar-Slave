@@ -1,103 +1,172 @@
-
-;-----------------------------------------------------------------------------------------------------------------------------------------------
-;PROJECT NAME:	SETUP FOR 1788
-;DATE:		10 APRIL 2025
-;VERSION:		2
-;CREATOR:		JUSTIN BELL, REVISED BY PAYDEN HOSKINS
-;COMPANY:	IDAHO STATE UNIVERSITY
-;DESCRIPTION:	SETUP INCLUDE FILE FOR THE 1788 AS A SLAVE
-;		ADDRESSES ALL PORTS AND OTHER REGISTERS
-;-----------------------------------------------------------------------------------------------------------------------------------------------
-
+;Brandon Barrera
+;RCET 3375
+;Test code for I2C
+;12/11/2025
     
-#include <xc.inc>     
+; PIC16F1788 Configuration Bit Settings
+
+; Assembly source line config statements
+
+;Start of program 
+PSECT	    code
+ 
+Setup_inc:
+    MOVLB 0x07		;Bank 7
+    CLRF INLVLC		;Configures voltage level to trigger IOC, Port C
     
-DATA_BYTE			EQU	0X070
-DATA_RX_1			EQU	0X071
-DATA_RX_2			EQU	0X072
-DATA_RX_3			EQU	0X073
-
-PSECT    code
-
-I2C_SETUP_PERIPHERAL:
-    BANKSEL SSP1ADD
-    MOVLW   0x00
-    MOVWF   SSP1ADD
-    BANKSEL SSP1CON1
-    BCF SSP1CON1, 4
-    BANKSEL TRISC
-    BSF TRISC,3
-    BSF TRISC,4		;Set SCL and SDA as inputs
-    BANKSEL SSP1CON1
-    MOVLW 0X3E
-    MOVWF SSP1CON1		;Enable SDA and SCL Pins, Enable Clock, and Set as 7 bit address Slave
-    BANKSEL SSP1CON2
+    ;----------------------------------------------------------
+    MOVLB 0x06		;Bank 6
+    CLRF SLRCONC	;Configures Slew Rate Limit, Port C
+    
+    ;----------------------------------------------------------
+    MOVLB 0x05		;Bank 5
+    MOVLW 0x18
+    MOVWF ODCONC	;Configures Sink Source Current, Port C
+    
+    ;----------------------------------------------------------
+    MOVLB 0x04		;Bank 4
+    CLRF WPUC		;Configures Internal Pull-ups, Port C
+    MOVLW 0x20
+    MOVWF SSP1ADD	;Configures I2C address
+    MOVLW 0X36
+    MOVWF SSP1CON1	;Enable SDA SCL Pins, Clock, & Set as 7 bit address Slave
     MOVLW 0X81
-    MOVWF SSP1CON2		;Enable General Call and Enable Clock Strechting
-    BANKSEL SSP1CON3		
+    MOVWF SSP1CON2	;Enable General Call & Clock Strechting
     MOVLW 0X0B
-    MOVWF SSP1CON3		;Disable Slave Interrupts, SDA Hold Time of 300nS, Auto Enable Address and Data Clock Stretching
-    BANKSEL SSP1STAT
+    MOVWF SSP1CON3	;Disable Slave Interrupts, SDA Hold Time of 300nS, Auto Enable Address & Data Clock Stretching
     MOVLW 0X80
-    MOVWF SSP1STAT		;Disable Slew Rate Control and flags
-    BANKSEL SSP1MSK
+    MOVWF SSP1STAT	;Disable Slew Rate Control & flags
     MOVLW 0XFE
-    MOVWF SSP1MSK		;Enable address matching
-    RETURN
-
-I2C_READ:
-    BANKSEL PIR1
-    BTFSS PIR1, 3
-    GOTO GOOD_STOP
-    BANKSEL SSP1STAT
-    BTFSC SSP1STAT, 2
-    GOTO LOAD_BUFFER
-    BTFSC SSP1STAT, 5
-    GOTO RX_DATA
-    BANKSEL SSP1BUF
-    MOVF SSP1BUF,0
-    BANKSEL DATA_BYTE
+    MOVWF SSP1MSK	;Enable address matching
+    CLRF APFCON1
+    
+    ;----------------------------------------------------------
+    MOVLB 0x03		;Bank 3
+    CLRF ANSELC		;Configures Analog Inputs, Port C
+    
+    ;----------------------------------------------------------
+    MOVLB 0x02		;Bank 2
+    
+    ;----------------------------------------------------------
+    MOVLB 0x01		;Bank 1
+    MOVLW 0x18
+    MOVWF TRISC		;Configures I 0, Port C
+    MOVLW 0x80
+    MOVWF OPTION_REG	;Settings for TMR0, INT edge, and Pullup control, All Ports
+    BTFSC OSCSTAT, 6	;Is PLL ready?
+    GOTO $-1		;No
+    MOVLW 0X78		;Configures Oscillator, Internal, 16MHz
+    MOVWF OSCCON
+    BTFSC OSCSTAT, 5	;Is Osc ready?
+    GOTO $-1		;No
+    MOVLW 0x08
+    MOVWF PIE1		;Enable I2C Interrupts
+    
+    ;----------------------------------------------------------
+    MOVLB 0x00		;Bank 0
+    MOVLW 0xF9
+    MOVWF PORTC		;Clears port to ensure known state, Port C
+    CLRF BANK_SAVE
+    CLRF W_SAVE
     CLRF DATA_BYTE
-    GOTO GOOD_STOP
+    CLRF DATA_RX_1
+    CLRF DATA_RX_2
+    CLRF DATA_RX_3
+    CLRF DATA_RX_4
+    CLRF DATA_RX_5
+    CLRF DATA_RX_6   
+    RETURN
+    ;----------------------------------------------------------
     
-LOAD_BUFFER:
-    ;LOAD BUFFER WITH DATA FOR THE MASTER TO READ
-    GOTO GOOD_STOP
     
-RX_DATA:
-    BANKSEL DATA_BYTE
-    BTFSC DATA_BYTE, 1
-    GOTO RX_THREE
-    BTFSC DATA_BYTE, 0
-    GOTO RX_TWO
-RX_ONE:
-    BANKSEL SSP1BUF
-    MOVF SSP1BUF,0
-    BANKSEL DATA_RX_1
-    MOVWF DATA_RX_1
-    BANKSEL DATA_BYTE
-    BSF DATA_BYTE, 0
-    GOTO GOOD_STOP
-RX_TWO:
-    BANKSEL SSP1BUF
-    MOVF SSP1BUF,0
-    BANKSEL DATA_RX_2
-    MOVWF DATA_RX_2
-    BANKSEL DATA_BYTE
-    BCF DATA_BYTE, 0
-    BSF DATA_BYTE, 1
-RX_THREE:
-    BANKSEL SSP1BUF
-    MOVF SSP1BUF,0
-    BANKSEL DATA_RX_3
-    MOVWF DATA_RX_3
-    BANKSEL DATA_BYTE
-    BCF DATA_BYTE, 0
-    BCF DATA_BYTE, 1
+I2C_READ:
+    MOVWF W_SAVE		
+    MOVF BSR, 0		;Save Bank & W
+    MOVWF BANK_SAVE
+    BTFSC PIR1, 3	;Is I2C flag set?
+    GOTO Recieve 	;Yes
+Restore:
+    MOVLB 0x00		;Bank 0
+    BCF PIR1, 3		;Clear I2C flag
+    MOVLB 0x04		;Bank 4
+    BSF SSP1CON1, 4	;Hold clock Low
+    MOVF BANK_SAVE, 0	
+    MOVWF BSR		;Restore Bank & W
+    MOVF W_SAVE, 0	
+    RETURN		;Return to main code
+
+Recieve:
+    BSF PORTC, 2	;Status: Revieving
+    MOVLB 0x04		;Bank 4
+    MOVF SSP1BUF, 0	;Recieve I2C
+    BTFSC SSP1STAT, 0	;Is it done?
+    GOTO $-1		;No, wait
+    BTFSS SSP1STAT, 5	;Is it address or data?
+    GOTO Restore	;Address, Disregard
+    MOVLB 0x00		;Bank 0
+    MOVWF EVIL_TEMP	;Data, Save
+    MOVLW 0x05		
+    XORWF DATA_BYTE, 0	
+    BTFSC STATUS, 2	;Is it byte 6?
+    GOTO Byte6		;Yes
+    MOVLW 0x04		
+    XORWF DATA_BYTE, 0	
+    BTFSC STATUS, 2	;Is it byte 5?
+    GOTO Byte5		;Yes
+    MOVLW 0x03		
+    XORWF DATA_BYTE, 0	
+    BTFSC STATUS, 2	;Is it byte 4?
+    GOTO Byte4		;Yes
+    MOVLW 0x02		
+    XORWF DATA_BYTE, 0	
+    BTFSC STATUS, 2	;Is it byte 3?
+    GOTO Byte3		;Yes
+    MOVLW 0x01		
+    XORWF DATA_BYTE, 0	
+    BTFSC STATUS, 2	;Is it byte 2?
+    GOTO Byte2		;Yes
+    MOVLW 0x00		
+    XORWF DATA_BYTE	
+    BTFSC STATUS, 2	;Is it byte 1?
+    GOTO Byte1		;Yes
+    GOTO Restore
     
-GOOD_STOP:
-    BANKSEL SSP1CON1
-    BSF SSP1CON1, 4
-    BANKSEL PIR1
-    BCF PIR1, 3
-    RETURN			;Write Complete.  Return With 0x00 in Working Register
+Byte1:
+    MOVF EVIL_TEMP, 0	;Move data to W
+    MOVWF DATA_RX_1	;Save first Byte
+    INCF DATA_BYTE, 1	;Increament for next byte
+    GOTO Restore	;Return
+    
+Byte2:
+    MOVF EVIL_TEMP, 0	;Move data to W
+    MOVWF DATA_RX_2	;Save second Byte
+    INCF DATA_BYTE, 1	;Increament for next byte
+    GOTO Restore	;Return
+    
+Byte3:
+    MOVF EVIL_TEMP, 0	;Move data to W
+    MOVWF DATA_RX_3	;Save third Byte
+    INCF DATA_BYTE, 1	;Reset
+    GOTO Restore	;Return
+    
+Byte4:
+    MOVF EVIL_TEMP, 0	;Move data to W
+    MOVWF DATA_RX_4	;Save fourth Byte
+    INCF DATA_BYTE, 1	;Reset
+    GOTO Restore	;Return
+    
+Byte5:
+    MOVF EVIL_TEMP, 0	;Move data to W
+    MOVWF DATA_RX_5	;Save fith Byte
+    INCF DATA_BYTE, 1	;Reset
+    GOTO Restore	;Return
+    
+Byte6:
+    MOVF EVIL_TEMP, 0	;Move data to W
+    MOVWF DATA_RX_6	;Save sixth Byte
+    CLRF DATA_BYTE	;Reset
+    BANKSEL PORTC
+    BSF	    PORTC,2	;Indicate full recive complete
+    GOTO Restore	;Return
+    
+END

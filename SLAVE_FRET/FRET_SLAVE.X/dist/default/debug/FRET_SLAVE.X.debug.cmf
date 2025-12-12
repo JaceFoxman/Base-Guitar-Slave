@@ -13,7 +13,7 @@
 %PSECTS
 $build/default/debug/FRET_SLAVE.o
 notes CODE 0 8 8 81 2 1
-code CODE 0 F0 F0 105 2 1
+code CODE 0 F0 F0 13D 2 1
 resetVect CODE 0 0 0 1 2 1
 isrVect CODE 0 4 4 1 2 1
 config CONFIG 4 8007 8007 2 2 1
@@ -62,11 +62,11 @@ BANK9 4A0-4EF 1
 CONST 1-3 2
 CONST 5-7 2
 CONST 89-EF 2
-CONST 1F5-3FFF 2
+CONST 22D-3FFF 2
 ENTRY 1-3 2
 ENTRY 5-7 2
 ENTRY 89-EF 2
-ENTRY 1F5-3FFF 2
+ENTRY 22D-3FFF 2
 IDLOC 8000-8003 2
 SFR10 500-51F 1
 SFR11 580-59F 1
@@ -93,12 +93,11 @@ SFR31 F80-FEF 1
 CODE 1-3 2
 CODE 5-7 2
 CODE 89-EF 2
-CODE 1F5-3FFF 2
+CODE 22D-3FFF 2
 SFR0 2-7 1
 SFR0 A-F 1
 SFR2 112-11F 1
 SFR3 180-19F 1
-SFR8 400-41F 1
 SFR9 480-49F 1
 BANK10 520-56F 1
 BANK11 5A0-5EF 1
@@ -122,11 +121,11 @@ EEDATA F000-F0FF 2
 STRCODE 1-3 2
 STRCODE 5-7 2
 STRCODE 89-EF 2
-STRCODE 1F5-3FFF 2
+STRCODE 22D-3FFF 2
 STRING 1-3 2
 STRING 5-7 2
 STRING 89-EF 2
-STRING 1F5-3FFF 2
+STRING 22D-3FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -141,137 +140,137 @@ STRING 1F5-3FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $build/default/debug/FRET_SLAVE.o
-8 notes CODE >72:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-9 notes CODE >73:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-A notes CODE >74:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-B notes CODE >75:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-C notes CODE >76:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-D notes CODE >77:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-E notes CODE >78:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-F notes CODE >79:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-10 notes CODE >80:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-11 notes CODE >81:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-12 notes CODE >82:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-13 notes CODE >83:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-14 notes CODE >84:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-15 notes CODE >85:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-16 notes CODE >86:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-17 notes CODE >87:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-18 notes CODE >88:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-19 notes CODE >89:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1A notes CODE >90:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1B notes CODE >91:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1C notes CODE >92:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1D notes CODE >93:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1E notes CODE >94:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1F notes CODE >95:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-20 notes CODE >96:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-21 notes CODE >97:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-22 notes CODE >98:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-23 notes CODE >99:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-24 notes CODE >100:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-25 notes CODE >101:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-26 notes CODE >102:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-27 notes CODE >103:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-28 notes CODE >104:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-29 notes CODE >105:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-2A notes CODE >106:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-2B notes CODE >107:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-2C notes CODE >108:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-2D notes CODE >109:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-2E notes CODE >110:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-2F notes CODE >111:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-30 notes CODE >112:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-31 notes CODE >113:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-32 notes CODE >114:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-33 notes CODE >115:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-34 notes CODE >116:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-35 notes CODE >117:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-36 notes CODE >118:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-37 notes CODE >119:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-38 notes CODE >120:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-39 notes CODE >121:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-3A notes CODE >122:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-3B notes CODE >123:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-3C notes CODE >124:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-3D notes CODE >125:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-3E notes CODE >126:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-3F notes CODE >127:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-40 notes CODE >128:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-41 notes CODE >129:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-42 notes CODE >130:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-43 notes CODE >131:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-44 notes CODE >132:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-45 notes CODE >133:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-46 notes CODE >134:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-47 notes CODE >135:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-48 notes CODE >136:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-49 notes CODE >137:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-4A notes CODE >138:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-4B notes CODE >139:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-4C notes CODE >140:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-4D notes CODE >141:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-4E notes CODE >142:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-4F notes CODE >143:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-50 notes CODE >144:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-51 notes CODE >145:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-52 notes CODE >146:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-53 notes CODE >147:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-54 notes CODE >148:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-55 notes CODE >149:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-56 notes CODE >150:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-57 notes CODE >151:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-58 notes CODE >152:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-59 notes CODE >153:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-5A notes CODE >154:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-5B notes CODE >155:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-5C notes CODE >156:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-5D notes CODE >157:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-5E notes CODE >158:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-5F notes CODE >159:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-60 notes CODE >160:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-61 notes CODE >161:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-62 notes CODE >162:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-63 notes CODE >163:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-64 notes CODE >164:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-65 notes CODE >165:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-66 notes CODE >166:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-67 notes CODE >167:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-68 notes CODE >168:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-69 notes CODE >169:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-6A notes CODE >170:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-6B notes CODE >171:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-6C notes CODE >172:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-6D notes CODE >173:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-6E notes CODE >174:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-6F notes CODE >175:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-70 notes CODE >176:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-71 notes CODE >177:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-72 notes CODE >178:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-73 notes CODE >179:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-74 notes CODE >180:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-75 notes CODE >181:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-76 notes CODE >182:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-77 notes CODE >183:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-78 notes CODE >184:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-79 notes CODE >185:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-7A notes CODE >186:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-7B notes CODE >187:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-7C notes CODE >188:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-7D notes CODE >189:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-7E notes CODE >190:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-7F notes CODE >191:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-80 notes CODE >192:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-81 notes CODE >193:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-82 notes CODE >194:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-83 notes CODE >195:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-84 notes CODE >196:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-85 notes CODE >197:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-86 notes CODE >198:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-87 notes CODE >199:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-88 notes CODE >200:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-4 isrVect CODE >67:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-0 resetVect CODE >65:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+8 notes CODE >82:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+9 notes CODE >83:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+A notes CODE >84:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+B notes CODE >85:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+C notes CODE >86:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+D notes CODE >87:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+E notes CODE >88:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+F notes CODE >89:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+10 notes CODE >90:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+11 notes CODE >91:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+12 notes CODE >92:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+13 notes CODE >93:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+14 notes CODE >94:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+15 notes CODE >95:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+16 notes CODE >96:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+17 notes CODE >97:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+18 notes CODE >98:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+19 notes CODE >99:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1A notes CODE >100:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1B notes CODE >101:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1C notes CODE >102:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1D notes CODE >103:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1E notes CODE >104:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1F notes CODE >105:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+20 notes CODE >106:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+21 notes CODE >107:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+22 notes CODE >108:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+23 notes CODE >109:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+24 notes CODE >110:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+25 notes CODE >111:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+26 notes CODE >112:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+27 notes CODE >113:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+28 notes CODE >114:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+29 notes CODE >115:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+2A notes CODE >116:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+2B notes CODE >117:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+2C notes CODE >118:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+2D notes CODE >119:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+2E notes CODE >120:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+2F notes CODE >121:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+30 notes CODE >122:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+31 notes CODE >123:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+32 notes CODE >124:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+33 notes CODE >125:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+34 notes CODE >126:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+35 notes CODE >127:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+36 notes CODE >128:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+37 notes CODE >129:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+38 notes CODE >130:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+39 notes CODE >131:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+3A notes CODE >132:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+3B notes CODE >133:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+3C notes CODE >134:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+3D notes CODE >135:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+3E notes CODE >136:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+3F notes CODE >137:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+40 notes CODE >138:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+41 notes CODE >139:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+42 notes CODE >140:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+43 notes CODE >141:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+44 notes CODE >142:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+45 notes CODE >143:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+46 notes CODE >144:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+47 notes CODE >145:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+48 notes CODE >146:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+49 notes CODE >147:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+4A notes CODE >148:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+4B notes CODE >149:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+4C notes CODE >150:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+4D notes CODE >151:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+4E notes CODE >152:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+4F notes CODE >153:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+50 notes CODE >154:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+51 notes CODE >155:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+52 notes CODE >156:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+53 notes CODE >157:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+54 notes CODE >158:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+55 notes CODE >159:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+56 notes CODE >160:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+57 notes CODE >161:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+58 notes CODE >162:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+59 notes CODE >163:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+5A notes CODE >164:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+5B notes CODE >165:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+5C notes CODE >166:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+5D notes CODE >167:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+5E notes CODE >168:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+5F notes CODE >169:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+60 notes CODE >170:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+61 notes CODE >171:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+62 notes CODE >172:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+63 notes CODE >173:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+64 notes CODE >174:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+65 notes CODE >175:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+66 notes CODE >176:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+67 notes CODE >177:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+68 notes CODE >178:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+69 notes CODE >179:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+6A notes CODE >180:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+6B notes CODE >181:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+6C notes CODE >182:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+6D notes CODE >183:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+6E notes CODE >184:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+6F notes CODE >185:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+70 notes CODE >186:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+71 notes CODE >187:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+72 notes CODE >188:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+73 notes CODE >189:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+74 notes CODE >190:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+75 notes CODE >191:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+76 notes CODE >192:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+77 notes CODE >193:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+78 notes CODE >194:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+79 notes CODE >195:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+7A notes CODE >196:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+7B notes CODE >197:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+7C notes CODE >198:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+7D notes CODE >199:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+7E notes CODE >200:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+7F notes CODE >201:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+80 notes CODE >202:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+81 notes CODE >203:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+82 notes CODE >204:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+83 notes CODE >205:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+84 notes CODE >206:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+85 notes CODE >207:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+86 notes CODE >208:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+87 notes CODE >209:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+88 notes CODE >210:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+4 isrVect CODE >77:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+0 resetVect CODE >74:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
 F0 code CODE >17:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/88SetUp.inc
 F1 code CODE >18:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/88SetUp.inc
 F2 code CODE >19:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/88SetUp.inc
@@ -371,168 +370,224 @@ FF code CODE >34:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Pr
 150 code CODE >129:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/88SetUp.inc
 151 code CODE >130:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/88SetUp.inc
 152 code CODE >176:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/88SetUp.inc
-153 code CODE >23:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-154 code CODE >24:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-155 code CODE >25:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-156 code CODE >26:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-157 code CODE >27:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-158 code CODE >28:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-159 code CODE >29:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-15A code CODE >30:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-15B code CODE >31:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-15C code CODE >32:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-15D code CODE >33:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-15E code CODE >34:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-15F code CODE >35:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-160 code CODE >36:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-161 code CODE >37:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-162 code CODE >38:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-163 code CODE >39:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-164 code CODE >40:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-165 code CODE >41:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-166 code CODE >42:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-167 code CODE >43:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-168 code CODE >44:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-169 code CODE >45:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-16A code CODE >46:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-16B code CODE >49:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-16C code CODE >50:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-16D code CODE >51:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-16E code CODE >52:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-16F code CODE >53:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-170 code CODE >54:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-171 code CODE >55:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-172 code CODE >56:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-173 code CODE >57:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-174 code CODE >58:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-175 code CODE >59:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-176 code CODE >60:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-177 code CODE >61:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-178 code CODE >65:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-179 code CODE >68:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-17A code CODE >69:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-17B code CODE >70:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-17C code CODE >71:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-17D code CODE >72:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-17E code CODE >74:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-17F code CODE >75:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-180 code CODE >76:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-181 code CODE >77:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-182 code CODE >78:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-183 code CODE >79:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-184 code CODE >80:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-185 code CODE >82:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-186 code CODE >83:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-187 code CODE >84:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-188 code CODE >85:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-189 code CODE >86:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-18A code CODE >87:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-18B code CODE >88:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-18C code CODE >90:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-18D code CODE >91:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-18E code CODE >92:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-18F code CODE >93:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-190 code CODE >94:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-191 code CODE >95:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-192 code CODE >96:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-193 code CODE >99:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-194 code CODE >100:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-195 code CODE >101:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-196 code CODE >102:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-197 code CODE >103:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X/I2C_READ.inc
-198 code CODE >205:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-199 code CODE >206:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-19A code CODE >207:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-19B code CODE >208:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-19C code CODE >209:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-19D code CODE >210:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-19E code CODE >214:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-19F code CODE >215:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1A0 code CODE >218:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1A1 code CODE >222:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1A2 code CODE >223:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1A3 code CODE >224:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1A4 code CODE >225:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1A5 code CODE >229:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1A6 code CODE >232:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1A7 code CODE >236:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1A8 code CODE >237:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1A9 code CODE >238:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1AA code CODE >239:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1AB code CODE >241:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1AC code CODE >245:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1AD code CODE >247:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1AE code CODE >248:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1AF code CODE >250:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1B0 code CODE >251:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1B1 code CODE >255:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1B2 code CODE >256:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1B3 code CODE >259:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1B4 code CODE >260:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1B5 code CODE >261:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1B6 code CODE >262:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1B7 code CODE >265:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1B8 code CODE >266:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1B9 code CODE >267:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1BA code CODE >268:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1BB code CODE >271:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1BC code CODE >272:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1BD code CODE >273:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1BE code CODE >274:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1BF code CODE >277:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1C0 code CODE >278:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1C1 code CODE >279:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1C2 code CODE >280:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1C3 code CODE >283:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1C4 code CODE >284:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1C5 code CODE >285:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1C6 code CODE >286:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1C7 code CODE >289:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1C8 code CODE >290:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1C9 code CODE >291:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1CA code CODE >292:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1CB code CODE >295:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1CC code CODE >296:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1CD code CODE >297:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1CE code CODE >298:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1CF code CODE >301:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1D0 code CODE >302:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1D1 code CODE >303:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1D2 code CODE >304:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1D3 code CODE >307:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1D4 code CODE >308:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1D5 code CODE >309:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1D6 code CODE >310:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1D7 code CODE >313:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1D8 code CODE >314:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1D9 code CODE >315:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1DA code CODE >316:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1DB code CODE >319:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1DC code CODE >320:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1DD code CODE >321:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1DE code CODE >322:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1DF code CODE >325:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1E0 code CODE >326:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1E1 code CODE >327:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1E2 code CODE >328:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1E3 code CODE >331:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1E4 code CODE >336:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1E5 code CODE >337:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1E6 code CODE >338:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1E7 code CODE >342:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1E8 code CODE >343:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1E9 code CODE >344:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1EA code CODE >346:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1EB code CODE >347:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1EC code CODE >348:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1ED code CODE >350:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1EE code CODE >351:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1EF code CODE >352:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1F0 code CODE >354:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1F1 code CODE >357:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1F2 code CODE >358:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1F3 code CODE >359:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
-1F4 code CODE >360:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+153 code CODE >216:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+154 code CODE >217:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+155 code CODE >218:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+156 code CODE >219:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+157 code CODE >223:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+158 code CODE >224:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+159 code CODE >229:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+15A code CODE >230:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+15B code CODE >232:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+15C code CODE >233:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+15D code CODE >235:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+15E code CODE >239:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+15F code CODE >240:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+160 code CODE >245:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+161 code CODE >246:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+162 code CODE >248:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+163 code CODE >249:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+164 code CODE >250:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+165 code CODE >251:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+166 code CODE >253:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+167 code CODE >254:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+168 code CODE >255:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+169 code CODE >256:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+16A code CODE >258:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+16B code CODE >259:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+16C code CODE >260:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+16D code CODE >261:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+16E code CODE >263:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+16F code CODE >264:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+170 code CODE >265:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+171 code CODE >266:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+172 code CODE >268:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+173 code CODE >269:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+174 code CODE >270:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+175 code CODE >271:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+176 code CODE >273:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+177 code CODE >274:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+178 code CODE >275:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+179 code CODE >276:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+17A code CODE >278:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+17B code CODE >279:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+17C code CODE >280:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+17D code CODE >281:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+17E code CODE >283:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+17F code CODE >284:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+180 code CODE >285:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+181 code CODE >286:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+182 code CODE >288:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+183 code CODE >289:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+184 code CODE >290:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+185 code CODE >291:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+186 code CODE >293:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+187 code CODE >294:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+188 code CODE >295:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+189 code CODE >296:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+18A code CODE >298:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+18B code CODE >299:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+18C code CODE >300:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+18D code CODE >301:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+18E code CODE >303:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+18F code CODE >304:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+190 code CODE >305:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+191 code CODE >306:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+192 code CODE >308:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+193 code CODE >309:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+194 code CODE >314:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+195 code CODE >315:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+196 code CODE >316:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+197 code CODE >317:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+198 code CODE >320:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+199 code CODE >321:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+19A code CODE >323:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+19B code CODE >324:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+19C code CODE >325:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+19D code CODE >329:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+19E code CODE >330:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+19F code CODE >331:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1A0 code CODE >333:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1A1 code CODE >334:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1A2 code CODE >335:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1A3 code CODE >337:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1A4 code CODE >338:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1A5 code CODE >339:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1A6 code CODE >341:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1A7 code CODE >347:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1A8 code CODE >348:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1A9 code CODE >349:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1AA code CODE >350:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1AB code CODE >354:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1AC code CODE >355:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1AD code CODE >356:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1AE code CODE >360:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1AF code CODE >361:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1B0 code CODE >362:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1B1 code CODE >366:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1B2 code CODE >367:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1B3 code CODE >370:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1B4 code CODE >371:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1B5 code CODE >374:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1B6 code CODE >375:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1B7 code CODE >376:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1B8 code CODE >379:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1B9 code CODE >380:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1BA code CODE >381:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1BB code CODE >382:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1BC code CODE >383:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1BD code CODE >384:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1BE code CODE >385:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1BF code CODE >386:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1C0 code CODE >387:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1C1 code CODE >388:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1C2 code CODE >389:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1C3 code CODE >390:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1C4 code CODE >391:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1C5 code CODE >392:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1C6 code CODE >393:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1C7 code CODE >396:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1C8 code CODE >397:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1C9 code CODE >400:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1CA code CODE >403:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1CB code CODE >404:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1CC code CODE >405:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1CD code CODE >406:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1CE code CODE >407:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1CF code CODE >408:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1D0 code CODE >409:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1D1 code CODE >410:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1D2 code CODE >411:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1D3 code CODE >412:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1D4 code CODE >413:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1D5 code CODE >414:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1D6 code CODE >415:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1D7 code CODE >418:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1D8 code CODE >419:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1D9 code CODE >420:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1DA code CODE >421:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1DB code CODE >422:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1DC code CODE >423:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1DD code CODE >424:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1DE code CODE >425:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1DF code CODE >426:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1E0 code CODE >427:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1E1 code CODE >428:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1E2 code CODE >429:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1E3 code CODE >430:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1E4 code CODE >435:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1E5 code CODE >436:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1E6 code CODE >437:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1E7 code CODE >438:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1E8 code CODE >439:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1E9 code CODE >441:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1EA code CODE >442:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1EB code CODE >443:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1EC code CODE >444:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1ED code CODE >445:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1EE code CODE >446:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1EF code CODE >447:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1F0 code CODE >448:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1F1 code CODE >451:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1F2 code CODE >452:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1F3 code CODE >453:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1F4 code CODE >454:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1F5 code CODE >455:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1F6 code CODE >456:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1F7 code CODE >457:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1F8 code CODE >458:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1F9 code CODE >459:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1FA code CODE >460:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1FB code CODE >461:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1FC code CODE >462:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1FD code CODE >463:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1FE code CODE >464:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+1FF code CODE >465:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+200 code CODE >466:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+201 code CODE >467:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+202 code CODE >468:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+203 code CODE >469:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+204 code CODE >470:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+205 code CODE >471:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+206 code CODE >472:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+207 code CODE >473:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+208 code CODE >474:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+209 code CODE >475:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+20A code CODE >476:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+20B code CODE >477:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+20C code CODE >478:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+20D code CODE >479:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+20E code CODE >480:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+20F code CODE >481:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+210 code CODE >482:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+211 code CODE >483:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+212 code CODE >484:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+213 code CODE >487:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+214 code CODE >488:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+215 code CODE >489:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+216 code CODE >490:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+217 code CODE >493:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+218 code CODE >494:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+219 code CODE >495:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+21A code CODE >496:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+21B code CODE >499:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+21C code CODE >500:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+21D code CODE >501:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+21E code CODE >502:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+21F code CODE >505:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+220 code CODE >506:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+221 code CODE >507:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+222 code CODE >508:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+223 code CODE >511:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+224 code CODE >512:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+225 code CODE >513:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+226 code CODE >514:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+227 code CODE >517:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+228 code CODE >518:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+229 code CODE >519:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+22A code CODE >520:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+22B code CODE >521:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
+22C code CODE >522:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Programming\SLAVE_FRET\FRET_SLAVE.X\FRET_SLAVE.S
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -545,68 +600,68 @@ FF code CODE >34:C:\Users\JaceF\MPLABXProjects\MIDI-Projects\Universals\Slave\Pr
 # was defined in a psect then <psect> will be "-". File-name
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
-__Hspace_0 3EA 0 ABS 0 - -
+__Hspace_0 45A 0 ABS 0 - -
 __Hspace_1 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 10010 0 ABS 0 - -
 __HisrVect A 0 CODE 0 isrVect -
-__Hudata_bank0 3EA 0 ABS 0 udata_bank0 -
-__Hudata_bank1 3EA 0 ABS 0 udata_bank1 -
-__Hudata_bank2 3EA 0 ABS 0 udata_bank2 -
-__Hudata_bank3 3EA 0 ABS 0 udata_bank3 -
-__Hudata_bank4 3EA 0 ABS 0 udata_bank4 -
-__Hudata_bank5 3EA 0 ABS 0 udata_bank5 -
-__Hudata_bank6 3EA 0 ABS 0 udata_bank6 -
-__Hudata_bank7 3EA 0 ABS 0 udata_bank7 -
-__Hudata_bank8 3EA 0 ABS 0 udata_bank8 -
-__Hudata_bank9 3EA 0 ABS 0 udata_bank9 -
+__Hudata_bank0 45A 0 ABS 0 udata_bank0 -
+__Hudata_bank1 45A 0 ABS 0 udata_bank1 -
+__Hudata_bank2 45A 0 ABS 0 udata_bank2 -
+__Hudata_bank3 45A 0 ABS 0 udata_bank3 -
+__Hudata_bank4 45A 0 ABS 0 udata_bank4 -
+__Hudata_bank5 45A 0 ABS 0 udata_bank5 -
+__Hudata_bank6 45A 0 ABS 0 udata_bank6 -
+__Hudata_bank7 45A 0 ABS 0 udata_bank7 -
+__Hudata_bank8 45A 0 ABS 0 udata_bank8 -
+__Hudata_bank9 45A 0 ABS 0 udata_bank9 -
 __L__absolute__ 0 0 ABS 0 __absolute__ -
-__Hudata_bank10 3EA 0 ABS 0 udata_bank10 -
-__Hudata_bank11 3EA 0 ABS 0 udata_bank11 -
-__Hudata_bank12 3EA 0 ABS 0 udata_bank12 -
-__Hudata_bank13 3EA 0 ABS 0 udata_bank13 -
-__Hudata_bank14 3EA 0 ABS 0 udata_bank14 -
-__Hudata_bank15 3EA 0 ABS 0 udata_bank15 -
-__Hudata_bank16 3EA 0 ABS 0 udata_bank16 -
-__Hudata_bank17 3EA 0 ABS 0 udata_bank17 -
-__Hudata_bank18 3EA 0 ABS 0 udata_bank18 -
-__Hudata_bank19 3EA 0 ABS 0 udata_bank19 -
-__Hudata_bank20 3EA 0 ABS 0 udata_bank20 -
-__Hudata_bank21 3EA 0 ABS 0 udata_bank21 -
-__Hudata_bank22 3EA 0 ABS 0 udata_bank22 -
-__Hudata_bank23 3EA 0 ABS 0 udata_bank23 -
-__Hudata_bank24 3EA 0 ABS 0 udata_bank24 -
-__Hudata_bank25 3EA 0 ABS 0 udata_bank25 -
-__Hedata 3EA 0 ABS 0 edata -
+__Hudata_bank10 45A 0 ABS 0 udata_bank10 -
+__Hudata_bank11 45A 0 ABS 0 udata_bank11 -
+__Hudata_bank12 45A 0 ABS 0 udata_bank12 -
+__Hudata_bank13 45A 0 ABS 0 udata_bank13 -
+__Hudata_bank14 45A 0 ABS 0 udata_bank14 -
+__Hudata_bank15 45A 0 ABS 0 udata_bank15 -
+__Hudata_bank16 45A 0 ABS 0 udata_bank16 -
+__Hudata_bank17 45A 0 ABS 0 udata_bank17 -
+__Hudata_bank18 45A 0 ABS 0 udata_bank18 -
+__Hudata_bank19 45A 0 ABS 0 udata_bank19 -
+__Hudata_bank20 45A 0 ABS 0 udata_bank20 -
+__Hudata_bank21 45A 0 ABS 0 udata_bank21 -
+__Hudata_bank22 45A 0 ABS 0 udata_bank22 -
+__Hudata_bank23 45A 0 ABS 0 udata_bank23 -
+__Hudata_bank24 45A 0 ABS 0 udata_bank24 -
+__Hudata_bank25 45A 0 ABS 0 udata_bank25 -
+__Hedata 45A 0 ABS 0 edata -
 __Hnotes 112 0 CODE 0 notes -
-__Hudata 3EA 0 ABS 0 udata -
+__Hudata 45A 0 ABS 0 udata -
 __Hconfig 10012 0 CONFIG 4 config -
-__Ledata 3EA 0 ABS 0 edata -
+__Ledata 45A 0 ABS 0 edata -
 __Lnotes 10 0 CODE 0 notes -
-__Ludata 3EA 0 ABS 0 udata -
-__Hcode 3EA 0 CODE 0 code -
-__Hdata 3EA 0 ABS 0 data -
+__Ludata 45A 0 ABS 0 udata -
+__Hcode 45A 0 CODE 0 code -
+__Hdata 45A 0 ABS 0 data -
 __Lcode 1E0 0 CODE 0 code -
-__Ldata 3EA 0 ABS 0 data -
+__Ldata 45A 0 ABS 0 data -
 __S0 0 0 ABS 0 - -
 __S1 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-__Ludata_bank10 3EA 0 ABS 0 udata_bank10 -
-__Ludata_bank11 3EA 0 ABS 0 udata_bank11 -
-__Ludata_bank12 3EA 0 ABS 0 udata_bank12 -
-__Ludata_bank13 3EA 0 ABS 0 udata_bank13 -
-__Ludata_bank14 3EA 0 ABS 0 udata_bank14 -
-__Ludata_bank15 3EA 0 ABS 0 udata_bank15 -
-__Ludata_bank16 3EA 0 ABS 0 udata_bank16 -
-__Ludata_bank17 3EA 0 ABS 0 udata_bank17 -
-__Ludata_bank18 3EA 0 ABS 0 udata_bank18 -
-__Ludata_bank19 3EA 0 ABS 0 udata_bank19 -
-__Ludata_bank20 3EA 0 ABS 0 udata_bank20 -
-__Ludata_bank21 3EA 0 ABS 0 udata_bank21 -
-__Ludata_bank22 3EA 0 ABS 0 udata_bank22 -
-__Ludata_bank23 3EA 0 ABS 0 udata_bank23 -
-__Ludata_bank24 3EA 0 ABS 0 udata_bank24 -
-__Ludata_bank25 3EA 0 ABS 0 udata_bank25 -
+__Ludata_bank10 45A 0 ABS 0 udata_bank10 -
+__Ludata_bank11 45A 0 ABS 0 udata_bank11 -
+__Ludata_bank12 45A 0 ABS 0 udata_bank12 -
+__Ludata_bank13 45A 0 ABS 0 udata_bank13 -
+__Ludata_bank14 45A 0 ABS 0 udata_bank14 -
+__Ludata_bank15 45A 0 ABS 0 udata_bank15 -
+__Ludata_bank16 45A 0 ABS 0 udata_bank16 -
+__Ludata_bank17 45A 0 ABS 0 udata_bank17 -
+__Ludata_bank18 45A 0 ABS 0 udata_bank18 -
+__Ludata_bank19 45A 0 ABS 0 udata_bank19 -
+__Ludata_bank20 45A 0 ABS 0 udata_bank20 -
+__Ludata_bank21 45A 0 ABS 0 udata_bank21 -
+__Ludata_bank22 45A 0 ABS 0 udata_bank22 -
+__Ludata_bank23 45A 0 ABS 0 udata_bank23 -
+__Ludata_bank24 45A 0 ABS 0 udata_bank24 -
+__Ludata_bank25 45A 0 ABS 0 udata_bank25 -
 __Lconfig 0 0 CONFIG 4 config -
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
@@ -614,20 +669,20 @@ __Lspace_3 0 0 ABS 0 - -
 __Lspace_4 0 0 ABS 0 - -
 __LisrVect 8 0 CODE 0 isrVect -
 __HresetVect 2 0 CODE 0 resetVect -
-__Ludata_bank0 3EA 0 ABS 0 udata_bank0 -
-__Ludata_bank1 3EA 0 ABS 0 udata_bank1 -
-__Ludata_bank2 3EA 0 ABS 0 udata_bank2 -
-__Ludata_bank3 3EA 0 ABS 0 udata_bank3 -
-__Ludata_bank4 3EA 0 ABS 0 udata_bank4 -
-__Ludata_bank5 3EA 0 ABS 0 udata_bank5 -
-__Ludata_bank6 3EA 0 ABS 0 udata_bank6 -
-__Ludata_bank7 3EA 0 ABS 0 udata_bank7 -
-__Ludata_bank8 3EA 0 ABS 0 udata_bank8 -
-__Ludata_bank9 3EA 0 ABS 0 udata_bank9 -
+__Ludata_bank0 45A 0 ABS 0 udata_bank0 -
+__Ludata_bank1 45A 0 ABS 0 udata_bank1 -
+__Ludata_bank2 45A 0 ABS 0 udata_bank2 -
+__Ludata_bank3 45A 0 ABS 0 udata_bank3 -
+__Ludata_bank4 45A 0 ABS 0 udata_bank4 -
+__Ludata_bank5 45A 0 ABS 0 udata_bank5 -
+__Ludata_bank6 45A 0 ABS 0 udata_bank6 -
+__Ludata_bank7 45A 0 ABS 0 udata_bank7 -
+__Ludata_bank8 45A 0 ABS 0 udata_bank8 -
+__Ludata_bank9 45A 0 ABS 0 udata_bank9 -
 __H__absolute__ 0 0 ABS 0 __absolute__ -
 __LresetVect 0 0 CODE 0 resetVect -
-__Hudata_shr 3EA 0 ABS 0 udata_shr -
-__Ludata_shr 3EA 0 ABS 0 udata_shr -
+__Hudata_shr 45A 0 ABS 0 udata_shr -
+__Ludata_shr 45A 0 ABS 0 udata_shr -
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -653,7 +708,7 @@ __Ludata_shr 3EA 0 ABS 0 udata_shr -
 # All other numeric quantities are in decimal.
 %SEGMENTS
 notes 0 8 10 81 2
-code 0 F0 1E0 105 2
+code 0 F0 1E0 13D 2
 resetVect 0 0 0 1 2
 isrVect 0 4 8 1 2
 # %NOTES Section
