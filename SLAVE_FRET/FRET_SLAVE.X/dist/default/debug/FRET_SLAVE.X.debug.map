@@ -6,7 +6,7 @@ Linker command line:
   --edf=C:\Program Files\Microchip\xc8\v3.10\pic\dat\20250813170317_en.msgs \
   -cs -h+dist/default/debug\FRET_SLAVE.X.debug.sym \
   --cmf=dist/default/debug\FRET_SLAVE.X.debug.cmf -z -Q16F1788 \
-  -oC:\Users\JaceF\AppData\Local\Temp\xcAsl70.0\driver_tmp_3.o \
+  -oC:\Users\JaceF\AppData\Local\Temp\xcAsidc.0\driver_tmp_3.o \
   -presetVect=0h -pisrVect=04 -pnotes=08h -pcode=F0h --fixupoverflow=error \
   -ver=XC8 PIC(R) Assembler --fixupoverflow=lstwarn \
   -Mdist/default/debug/FRET_SLAVE.X.debug.map -E1 -ACODE=00h-07FFhx8 \
@@ -50,14 +50,14 @@ build/default/debug/FRET_SLAVE.o
                 notes                                 8        8       81       10       0
                 isrVect                               4        4        1        8       0
                 resetVect                             0        0        1        0       0
-                code                                 F0       F0      13D      1E0       0
+                code                                 F0       F0      109      1E0       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   CODE           
                 notes                                 8        8       81         0
                 isrVect                               4        4        1         0
                 resetVect                             0        0        1         0
-                code                                 F0       F0      13D         0
+                code                                 F0       F0      109         0
 
         CLASS   STRCODE        
 
@@ -205,7 +205,7 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 resetVect                      000000  000001  000001         0       0  CODE        2
                 isrVect                        000004  000001  000005         8       0  CODE        2
                 notes                          000008  000081  000089        10       0  CODE        2
-                code                           0000F0  00013D  00022D       1E0       0  CODE        2
+                code                           0000F0  000109  0001F9       1E0       0  CODE        2
 
 
 UNUSED ADDRESS RANGES
@@ -241,17 +241,17 @@ UNUSED ADDRESS RANGES
         CODE             00001-00003               3           2
                          00005-00007               3
                          00089-000EF              67
-                         0022D-03FFF             800
+                         001F9-03FFF             800
         COMMON           00070-0007F              10           1
         CONST            00001-00003               3           2
                          00005-00007               3
                          00089-000EF              67
-                         0022D-03FFF             100
+                         001F9-03FFF             100
         EEDATA           0F000-0F0FF             100           2
         ENTRY            00001-00003               3           2
                          00005-00007               3
                          00089-000EF              67
-                         0022D-03FFF             100
+                         001F9-03FFF             100
         IDLOC            08000-08003               4           2
         RAM              00020-0006F              50           1
                          000A0-000EF              50
@@ -305,57 +305,58 @@ UNUSED ADDRESS RANGES
         SFR3             00180-0019F              20           1
         SFR30            00F00-00F6F              70           1
         SFR31            00F80-00FEF              70           1
+        SFR8             00400-0041F              20           1
         SFR9             00480-0049F              20           1
         STRCODE          00001-00003               3           2
                          00005-00007               3
                          00089-000EF              67
-                         0022D-03FFF            3DD3
+                         001F9-03FFF            3E07
         STRING           00001-00003               3           2
                          00005-00007               3
                          00089-000EF              67
-                         0022D-03FFF             100
+                         001F9-03FFF             100
 
                                   Symbol Table
 
-__H__absolute__ __absolute__ 00000  __Hcode         code         0022D
-__Hconfig       config       08009  __Hdata         data         0045A
-__Hedata        edata        0045A  __HisrVect      isrVect      00005
+__H__absolute__ __absolute__ 00000  __Hcode         code         001F9
+__Hconfig       config       08009  __Hdata         data         003F2
+__Hedata        edata        003F2  __HisrVect      isrVect      00005
 __Hnotes        notes        00089  __HresetVect    resetVect    00001
-__Hspace_0      (abs)        0045A  __Hspace_1      (abs)        00000
+__Hspace_0      (abs)        003F2  __Hspace_1      (abs)        00000
 __Hspace_3      (abs)        00000  __Hspace_4      (abs)        10010
-__Hudata        udata        0045A  __Hudata_bank0  udata_bank0  0045A
-__Hudata_bank1  udata_bank1  0045A  __Hudata_bank10 udata_bank10 0045A
-__Hudata_bank11 udata_bank11 0045A  __Hudata_bank12 udata_bank12 0045A
-__Hudata_bank13 udata_bank13 0045A  __Hudata_bank14 udata_bank14 0045A
-__Hudata_bank15 udata_bank15 0045A  __Hudata_bank16 udata_bank16 0045A
-__Hudata_bank17 udata_bank17 0045A  __Hudata_bank18 udata_bank18 0045A
-__Hudata_bank19 udata_bank19 0045A  __Hudata_bank2  udata_bank2  0045A
-__Hudata_bank20 udata_bank20 0045A  __Hudata_bank21 udata_bank21 0045A
-__Hudata_bank22 udata_bank22 0045A  __Hudata_bank23 udata_bank23 0045A
-__Hudata_bank24 udata_bank24 0045A  __Hudata_bank25 udata_bank25 0045A
-__Hudata_bank3  udata_bank3  0045A  __Hudata_bank4  udata_bank4  0045A
-__Hudata_bank5  udata_bank5  0045A  __Hudata_bank6  udata_bank6  0045A
-__Hudata_bank7  udata_bank7  0045A  __Hudata_bank8  udata_bank8  0045A
-__Hudata_bank9  udata_bank9  0045A  __Hudata_shr    udata_shr    0045A
+__Hudata        udata        003F2  __Hudata_bank0  udata_bank0  003F2
+__Hudata_bank1  udata_bank1  003F2  __Hudata_bank10 udata_bank10 003F2
+__Hudata_bank11 udata_bank11 003F2  __Hudata_bank12 udata_bank12 003F2
+__Hudata_bank13 udata_bank13 003F2  __Hudata_bank14 udata_bank14 003F2
+__Hudata_bank15 udata_bank15 003F2  __Hudata_bank16 udata_bank16 003F2
+__Hudata_bank17 udata_bank17 003F2  __Hudata_bank18 udata_bank18 003F2
+__Hudata_bank19 udata_bank19 003F2  __Hudata_bank2  udata_bank2  003F2
+__Hudata_bank20 udata_bank20 003F2  __Hudata_bank21 udata_bank21 003F2
+__Hudata_bank22 udata_bank22 003F2  __Hudata_bank23 udata_bank23 003F2
+__Hudata_bank24 udata_bank24 003F2  __Hudata_bank25 udata_bank25 003F2
+__Hudata_bank3  udata_bank3  003F2  __Hudata_bank4  udata_bank4  003F2
+__Hudata_bank5  udata_bank5  003F2  __Hudata_bank6  udata_bank6  003F2
+__Hudata_bank7  udata_bank7  003F2  __Hudata_bank8  udata_bank8  003F2
+__Hudata_bank9  udata_bank9  003F2  __Hudata_shr    udata_shr    003F2
 __L__absolute__ __absolute__ 00000  __Lcode         code         000F0
-__Lconfig       config       00000  __Ldata         data         0045A
-__Ledata        edata        0045A  __LisrVect      isrVect      00004
+__Lconfig       config       00000  __Ldata         data         003F2
+__Ledata        edata        003F2  __LisrVect      isrVect      00004
 __Lnotes        notes        00008  __LresetVect    resetVect    00000
 __Lspace_0      (abs)        00000  __Lspace_1      (abs)        00000
 __Lspace_3      (abs)        00000  __Lspace_4      (abs)        00000
-__Ludata        udata        0045A  __Ludata_bank0  udata_bank0  0045A
-__Ludata_bank1  udata_bank1  0045A  __Ludata_bank10 udata_bank10 0045A
-__Ludata_bank11 udata_bank11 0045A  __Ludata_bank12 udata_bank12 0045A
-__Ludata_bank13 udata_bank13 0045A  __Ludata_bank14 udata_bank14 0045A
-__Ludata_bank15 udata_bank15 0045A  __Ludata_bank16 udata_bank16 0045A
-__Ludata_bank17 udata_bank17 0045A  __Ludata_bank18 udata_bank18 0045A
-__Ludata_bank19 udata_bank19 0045A  __Ludata_bank2  udata_bank2  0045A
-__Ludata_bank20 udata_bank20 0045A  __Ludata_bank21 udata_bank21 0045A
-__Ludata_bank22 udata_bank22 0045A  __Ludata_bank23 udata_bank23 0045A
-__Ludata_bank24 udata_bank24 0045A  __Ludata_bank25 udata_bank25 0045A
-__Ludata_bank3  udata_bank3  0045A  __Ludata_bank4  udata_bank4  0045A
-__Ludata_bank5  udata_bank5  0045A  __Ludata_bank6  udata_bank6  0045A
-__Ludata_bank7  udata_bank7  0045A  __Ludata_bank8  udata_bank8  0045A
-__Ludata_bank9  udata_bank9  0045A  __Ludata_shr    udata_shr    0045A
+__Ludata        udata        003F2  __Ludata_bank0  udata_bank0  003F2
+__Ludata_bank1  udata_bank1  003F2  __Ludata_bank10 udata_bank10 003F2
+__Ludata_bank11 udata_bank11 003F2  __Ludata_bank12 udata_bank12 003F2
+__Ludata_bank13 udata_bank13 003F2  __Ludata_bank14 udata_bank14 003F2
+__Ludata_bank15 udata_bank15 003F2  __Ludata_bank16 udata_bank16 003F2
+__Ludata_bank17 udata_bank17 003F2  __Ludata_bank18 udata_bank18 003F2
+__Ludata_bank19 udata_bank19 003F2  __Ludata_bank2  udata_bank2  003F2
+__Ludata_bank20 udata_bank20 003F2  __Ludata_bank21 udata_bank21 003F2
+__Ludata_bank22 udata_bank22 003F2  __Ludata_bank23 udata_bank23 003F2
+__Ludata_bank24 udata_bank24 003F2  __Ludata_bank25 udata_bank25 003F2
+__Ludata_bank3  udata_bank3  003F2  __Ludata_bank4  udata_bank4  003F2
+__Ludata_bank5  udata_bank5  003F2  __Ludata_bank6  udata_bank6  003F2
+__Ludata_bank7  udata_bank7  003F2  __Ludata_bank8  udata_bank8  003F2
+__Ludata_bank9  udata_bank9  003F2  __Ludata_shr    udata_shr    003F2
 __S0            (abs)        00000  __S1            (abs)        00000
 __S3            (abs)        00000  

@@ -14,15 +14,17 @@ PSECT code
 
 SETUP88:
  ;--------------------------------------------------------OSCILLATOR---------------------------------------------------------------------
-    BANKSEL	OSCSTAT
-    BTFSC	OSCSTAT,6	    ;WAIT FOR PLL TO BE UP AND RUNNING
-    GOTO	$-2
-    BANKSEL	OSCCON
-    MOVLW	0XEB
-    MOVWF	OSCCON
-    BANKSEL	OSCSTAT
-    BTFSC	OSCSTAT,5	    ;WAIT FOR OSSCILATOR TO BE READY
-    GOTO	$-1
+    BANKSEL OSCSTAT
+    BTFSC OSCSTAT,6	    ; WAIT FOR PLL TO BE UP AND RUNNING
+    GOTO $-1
+    BANKSEL OSCCON
+    CLRF OSCCON
+    MOVLW 0X78	    ; SET OSCILLATOR FOR 16MHZ AND LOOK AT CONFIG BITS
+    MOVWF OSCCON
+    BCF OSCCON,7	    ; DISABLE 4X PLL FOR 16MHZ CLOCK
+    BANKSEL OSCSTAT
+    BTFSC OSCSTAT,5	    ; WAIT FOR OSSCILATOR TO BE READY
+    GOTO $-1
  
 ;--------------------------------------------------------PORT A------------------------------------------------------------------------------
     BANKSEL	ADCON1

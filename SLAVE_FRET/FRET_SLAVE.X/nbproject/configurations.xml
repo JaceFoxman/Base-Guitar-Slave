@@ -15,6 +15,7 @@
                    projectFiles="true">
       <itemPath>88SetUp.inc</itemPath>
       <itemPath>pic16f1788.inc</itemPath>
+      <itemPath>I2C_READ.inc</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
